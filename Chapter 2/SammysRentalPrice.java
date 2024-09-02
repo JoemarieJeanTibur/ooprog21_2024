@@ -8,10 +8,10 @@ public class SammysRentalPrice {
         System.out.println("S Sammy's make it fun in the sun. S");
         System.out.println("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
 
-        Scanner event = new Scanner(System.in);
-        int rentMinutes;
+        Scanner tibur = new Scanner(System.in);
         System.out.print("Enter the number of minutes rented: ");
-        rentMinutes = event.nextInt();
+        int rentMinutes;
+        rentMinutes = tibur.nextInt();
 
         int hours = rentMinutes / 60;
         int extraMinutes = rentMinutes % 60;
@@ -23,7 +23,7 @@ public class SammysRentalPrice {
         System.out.println("Rental Cost: $" + rentalCost);
 
 
-    event.close();
+    tibur.close();
 
 
     }
