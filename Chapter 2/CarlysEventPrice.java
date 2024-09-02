@@ -33,8 +33,5 @@ public class CarlysEventPrice {
         
         tibur.close();
         
-        
-        
-        
     }
 }
