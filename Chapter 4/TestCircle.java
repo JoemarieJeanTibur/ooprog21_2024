@@ -5,7 +5,7 @@ class TestCircle {
         //objects
         Circle a = new Circle();
         Circle b = new Circle();
-        Circle c = new Circle();
+        //Circle c = new Circle();
 
         //print getter methods 
         a.setRadius(3);
@@ -18,10 +18,10 @@ class TestCircle {
         System.out.println("Diameter of the second circle: " + b.getDiameter());
         System.out.println("Area of the second circle: " + b.getArea());
 
-        c.setRadius(19);
-        System.out.println("Radius of the third circle: " + c.getRadius());
-        System.out.println("Diameter of the third circle: " + c.getDiameter());
-        System.out.println("Area of the third circle: " + c.getArea());
+        //c.setRadius(19);
+        //System.out.println("Radius of the third circle: " + c.getRadius());
+        //System.out.println("Diameter of the third circle: " + c.getDiameter());
+        //System.out.println("Area of the third circle: " + c.getArea());
 
     }
 }
