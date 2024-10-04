@@ -30,10 +30,10 @@ public class BloodData {
         return rhFactor;
     }
 
-   /* private void defaultPatient() {
+   private void defaultPatient() {
         bloodType = "A";
         rhFactor = "-";
-    } */
+    }
 
     public void displayBloodInfo() {
         System.out.println();
