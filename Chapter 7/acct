@@ -1,0 +1,29 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    Console.WriteLine("Enter Total Salary: ");
+    double salry = Convert.ToDouble(Console.ReadLine());
+    
+    Console.WriteLine("Enter years of service: ");
+    int yrs =  Convert.ToInt32(Console.ReadLine());
+    
+    if(yrs >= 5 && yrs <= 10) {
+        
+        double slry = salry * 0.05;
+        double totalSalary = salry + slry;
+        Console.WriteLine("You have a 5% bonus. Your total salary is: $" +totalSalary );
+    }
+    
+    else if(yrs > 10) {
+        
+        double slry = salry * 0.10;
+        double totalSalary = salry + slry;
+        Console.WriteLine("You have a 10% bonus. Your Total salary is: $ " + totalSalary);
+    }
+    
+    else {
+        Console.WriteLine("There is no bonus.");
+    }
+    
+  }
+}
