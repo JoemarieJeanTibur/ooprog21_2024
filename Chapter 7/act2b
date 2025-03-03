@@ -1,0 +1,27 @@
+using System;
+
+class HelloWorld
+{
+    static void Main()
+    {
+        Console.Write("Enter Total Purchase Amount: $");
+        double amount = Convert.ToDouble(Console.ReadLine());
+
+        if (amount >= 2000 && amount <= 5000)
+        {
+            double discount = amount * 0.10;
+            double discountedTotal = amount - discount;
+            Console.WriteLine("You have a 10% discount. Your discounted total is: $" + discountedTotal);
+        }
+        else if (amount > 5000)
+        {
+            double discount = amount * 0.20;
+            double discountedTotal = amount - discount;
+            Console.WriteLine("You have a 20% discount. Your discounted total is: $" + discountedTotal);
+        }
+        else
+        {
+            Console.WriteLine("If the total purchase is below $2000, there is no discount.");
+        }
+    }
+}
