@@ -42,6 +42,15 @@ namespace WindowsFormsApp1
                         label4.Text = "Maintain Silence, proper decorum, and discipline inside the laboratory.\n Mobile phones, wakkmans, and other personal pieces of equipment must be switched off.";
                         break;
                     case 2:
+                        label4.Text = "Games are not allowed inside the lab. This includes computer-related games, card games and other games that may disturb the operation of the lab.";
+                        break;
+                    case 3:
+                        label4.Text = "Surfing the Internet is allowed only with the permission of the instructor. Downloading and installing of software are strictly prohibited.";
+                        break;
+                    case 4: 
+                        label4.Text = "";
+                        break;
+                    case 5:
                         label4.Text = "";
                         break;
                 }
