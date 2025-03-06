@@ -1,0 +1,113 @@
+import java.util.Scanner;
+
+public class StudentApp {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        Student[] records = new Student[100]; // Array to hold student records
+        int count = 0; // Counter for number of students
+        int choice; // Menu choice
+        
+        do {
+            // Display menu
+            System.out.println("\nSTUDENT MANAGEMENT SYSTEM(Choose one)");
+            System.out.println("1. Add New Student");
+            System.out.println("2. Display All Students");
+            System.out.println("3. Display All Students in Reverse");
+            System.out.println("0. Exit/Terminate Program");
+            System.out.print("Enter your choice: ");
+            choice = input.nextInt();
+            input.nextLine(); // Clear buffer
+            
+            switch(choice) {
+                case 1: // Add new student
+                    addNewStudent(records, count, input);
+                    count++;
+                    break;
+                    
+                case 2: // Display all students
+                    displayAllStudents(records, count);
+                    break;
+                    
+               case 3: // Display all students in reverse
+                    displayInReverse(records, count);
+                    break; 
+                    
+                case 0: // Exit
+                    System.out.println("Exiting prrogram. Goodbye!");
+                    break;
+                    
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+            
+        } while (choice != 0);
+        
+        input.close();
+    }
+    
+    // Method to add a new student record to the array
+    public static void addNewStudent(Student[] students, int count, Scanner input) {
+        if (count < students.length) {
+            System.out.print("Enter Student Id: ");
+            int id = input.nextInt();
+            input.nextLine();
+            
+            System.out.print("Enter First Name: ");
+            String firstName = input.nextLine();
+            
+            System.out.print("Enter Last Name: ");
+            String lastName = input.nextLine();
+            
+            System.out.print("Enter Course: ");
+            String course = input.nextLine();
+            
+            System.out.print("Enter Year Level: ");
+            int yearLevel = input.nextInt();
+            input.nextLine();
+            
+            students[count] = new Student(id, firstName, lastName, course, yearLevel);
+            System.out.println("Student added successfully!");
+        } 
+        else {
+            System.out.println("Cannot add more students. Array is full.");
+        }
+    }
+
+    // Method to display all student records found in the array
+    public static void displayAllStudents(Student[] students, int count) {
+        System.out.println("\n----- All Students -----");
+        if (count == 0) {
+            System.out.println("No students found.");
+        } 
+        else {
+            for (int i = 0; i < count; i++) {
+        
+                System.out.println("Student ID: " + students[i].getIdNum());
+                System.out.println("Name: " + students[i].getFirstName() + "" + students[i].getLastName());
+                System.out.println("Course: " + students[i].getMjrCourse());
+                System.out.println("Year Level: " + students[i].getYearLvl());
+                }
+            }
+        }
+    
+    
+    public static void displayInReverse(Student[] students, int count) {
+        System.out.println("***** ALL STUDENTS (REVERSE ORDER)*****");
+         if (count == 0) {
+            System.out.println("No student found");
+         } 
+         else {
+          for (int i = count - 1; i >= 0; i--) {
+               System.out.println((i + 1) + ". ID: " + students[i].getIdNum()); // numbering changed.
+               System.out.println("   Name: " + students[i].getFirstName() + "" + students[i].getLastName());
+               System.out.println("   Course: " + students[i].getMjrCourse());
+               System.out.println("   Year Level: " + students[i].getYearLvl()); 
+               }
+      
+      
+         }
+   }
+   
+ }
+             
